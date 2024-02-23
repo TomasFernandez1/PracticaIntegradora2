@@ -1,0 +1,16 @@
+<h1>Register</h1>
+<div class="container">
+    <form action="/api/sessions/register" method="POST" class="form-group w-50">
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" required>
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" required>
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Email" required />
+        <label for="age">Age:</label>
+        <input type="number" name="age" placeholder="Age" min="1" max="100" required>
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="Password" required />
+        <button type="submit">Enviar</button>
+    </form>
+</div>

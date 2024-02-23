@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOMMERCE</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    {{#if req.user}}
+    <nav>
+        
+        <center><h1>Bienvenido</h1></center>
+        <center><h3>Email: {{req.user.email}} - Role: {{req.user.role}}</h3></center>
+        <form action="/api/sessions/logout" method="post">
+        <center><button type="submit">LOGOUT</button></center>
+        </form>
+        <button style="color: inherit; text-decoration: none;"><a href="/api/carts/{{req.user.cart}}">Go to cart</a></button>
+        <button style="color: inherit; text-decoration: none;"><a href="/api/products">Back</a></button>
+    </nav>
+        {{/if}}
+    {{{body}}}
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</html>
